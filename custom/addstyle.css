@@ -1,0 +1,168 @@
+:root {
+
+    --background: #0f1117;
+    --surface: #181b24;
+    --surface-hover: #222633;
+
+    --cyan: #39d9ff;
+    --purple: #a78bfa;
+
+    --text: #f5f7fa;
+    --muted: #9ca3af;
+
+    --danger: #ff5c70;
+
+    --border: #2a2e3a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.add-container {
+    width: min(650px, 92%);
+    margin: 60px auto;
+}
+
+.add-header {
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--cyan);
+}
+
+.add-header h1 {
+    margin-bottom: 8px;
+    font-size: 40px;
+}
+
+.add-header p:last-child {
+    color: var(--muted);
+}
+
+.form-card {
+
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+.error-message {
+
+    margin-bottom: 25px;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 92, 112, 0.3);
+    border-radius: 8px;
+    color: var(--danger);
+    background: rgba(255, 92, 112, 0.08);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input {
+
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--surface-hover);
+    transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #697080;
+}
+
+.form-group input:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 2px rgba(57, 217, 255, 0.08);
+}
+
+.form-actions {
+
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.save-button, .cancel-button {
+
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.save-button {
+    border: none;
+    color: #071014;
+    background: var(--cyan);
+}
+
+.save-button:hover {
+    background: #65e2ff;
+}
+
+.cancel-button {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--surface-hover);
+}
+
+.cancel-button:hover {
+    border-color: var(--cyan);
+}
+
+@media (max-width: 600px) {
+
+    .add-container {
+        width: 92%;
+        margin: 40px auto;
+    }
+    .form-card {
+        padding: 25px;
+    }
+    .add-header h1 {
+        font-size: 34px;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+    .save-button, .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+}

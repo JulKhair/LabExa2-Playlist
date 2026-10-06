@@ -1,0 +1,196 @@
+:root {
+
+    --background: #0f1117;
+    --surface: #181b24;
+    --surface-hover: #222633;
+
+    --cyan: #39d9ff;
+    --purple: #a78bfa;
+
+    --text: #f5f7fa;
+    --muted: #9ca3af;
+
+    --danger: #ff5c70;
+
+    --border: #2a2e3a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.records-container {
+    width: min(1100px, 92%);
+    margin: 60px auto;
+}
+
+.records-header {
+
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--cyan);
+}
+
+.records-header h1 {
+    margin-bottom: 8px;
+    font-size: 40px;
+}
+
+.records-description {
+    color: var(--muted);
+}
+
+.add-button {
+
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: #071014;
+    background: var(--cyan);
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+.add-button:hover {
+    background: #65e2ff;
+    transform: translateY(-2px);
+}
+
+.playlist-card {
+
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--surface-hover);
+}
+
+th {
+
+    padding: 16px;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+td {
+    padding: 18px 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(57, 217, 255, 0.04);
+}
+
+.song-id {
+    width: 60px;
+    color: var(--muted);
+}
+
+.song-title {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.singer {
+    font-weight: bold;
+    color: var(--cyan);
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+.edit-button, .delete-button {
+
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.edit-button {
+    color: var(--cyan);
+    background: rgba(57, 217, 255, 0.08);
+}
+
+.edit-button:hover {
+    background: rgba(57, 217, 255, 0.16);
+}
+
+.delete-button {
+    margin-left: 5px;
+    color: var(--danger);
+    background: rgba(255, 92, 112, 0.08);
+}
+
+.delete-button:hover {
+    background: rgba(255, 92, 112, 0.16);
+}
+
+.empty-message {
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--muted);
+}
+
+@media (max-width: 700px) {
+
+    .records-container {
+        width: 92%;
+        margin: 40px auto;
+    }
+    .records-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .add-button {
+        width: fit-content;
+    }
+}

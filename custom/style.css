@@ -1,0 +1,143 @@
+:root {
+
+    --background: #0f1117;
+    --surface: #181b24;
+    --surface-hover: #222633;
+
+    --cyan: #39d9ff;
+    --purple: #a78bfa;
+
+    --text: #f5f7fa;
+    --muted: #9ca3af;
+
+    --border: #2a2e3a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+.home-container {
+    width: min(900px, 90%);
+    margin: 80px auto;
+}
+
+.welcome {
+
+    padding: 50px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+}
+
+.eyebrow {
+
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--cyan);
+}
+
+.welcome h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.description {
+
+    max-width: 550px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.primary {
+    color: #071014;
+    background: var(--cyan);
+}
+
+.primary:hover {
+    background: #65e2ff;
+}
+
+.secondary {
+
+    color: var(--text);
+    border: 1px solid var(--border);
+    background: var(--surface-hover);
+}
+
+.secondary:hover {
+    border-color: var(--cyan);
+}
+
+.song-count {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    margin-top: 25px;
+    padding: 18px 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+}
+
+.count-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--cyan);
+}
+
+.count-label {
+    color: var(--muted);
+}
+
+@media (max-width: 600px) {
+
+    .home-container {
+        width: 92%;
+        margin: 40px auto;
+    }
+    .welcome {
+        padding: 30px 25px;
+    }
+    .welcome h1 {
+        font-size: 36px;
+    }
+    .actions {
+        flex-direction: column;
+    }
+    .btn {
+        text-align: center;
+    }
+}
